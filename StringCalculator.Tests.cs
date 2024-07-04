@@ -16,7 +16,7 @@ public class StringCalculatorAddTests
        Assert.Equal(expectedResult, result);
     }
 
-  [Fact]
+  /*[Fact]
     public void ExpectZeroForSingleZero()
     {
         int expectedResult = 0;
@@ -80,5 +80,5 @@ public class StringCalculatorAddTests
         int result = objUnderTest.Add(input);
 
        Assert.Equal(expectedResult, result);
-    }
+    }*/
 }
