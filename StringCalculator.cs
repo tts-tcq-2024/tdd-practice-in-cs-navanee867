@@ -2,7 +2,7 @@ using System;
 
 public class StringCalculator
 {
- public static int Add(string input)
+ public int Add(string input)
         {
             if (string.IsNullOrEmpty(input))
             {
@@ -23,7 +23,7 @@ public class StringCalculator
             return sum;
         }
 
-        private static int ParseAndValidateNumber(string number)
+        private int ParseAndValidateNumber(string number)
         {
             if (int.TryParse(number, out int result))
             {
