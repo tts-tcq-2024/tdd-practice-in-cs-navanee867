@@ -27,7 +27,7 @@ public class StringCalculatorAddTests
         Assert.Equal(expectedResult, result);
     }
 
-  /*[Fact]
+  [Fact]
     public void ExpectSumForTwoNumbers()
     {
         int expectedResult = 3;
@@ -80,5 +80,5 @@ public class StringCalculatorAddTests
         int result = objUnderTest.Add(input);
 
        Assert.Equal(expectedResult, result);
-    }*/
+    }
 }
