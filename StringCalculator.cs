@@ -14,21 +14,22 @@ public class StringCalculator
 
             int sum = 0;
 
-            foreach (int x in from string number in numberArray
-                              let x = int.Parse(number)
-                              select x)
+            foreach (string number in numberArray)
             {
-                if (x < 0)
+                if (int.TryParse(number, out int x))
                 {
-                    throw new Exception("Negative numbers are not allowed: " + x);
-                }
-                if (x < 1000)
-                {
-                    sum += x;
+                    if (x < 0)
+                    {
+                        throw new Exception("Negative numbers are not allowed: " + x);
+                    }
+
+                    if (x < 1000)
+                    {
+                        sum += x;
+                    }
                 }
             }
 
             return sum;
         }
-    }
 }
