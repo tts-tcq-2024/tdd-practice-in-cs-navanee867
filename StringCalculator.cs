@@ -16,20 +16,26 @@ public class StringCalculator
 
             foreach (string number in numberArray)
             {
-                if (int.TryParse(number, out int x))
-                {
-                    if (x < 0)
-                    {
-                        throw new Exception("Negative numbers are not allowed: " + x);
-                    }
-
-                    if (x < 1000)
-                    {
-                        sum += x;
-                    }
-                }
+                int x = ParseAndValidateNumber(number);
+                sum += (x < 1000) ? x : 0;
             }
 
             return sum;
+        }
+
+        private static int ParseAndValidateNumber(string number)
+        {
+            if (int.TryParse(number, out int result))
+            {
+                if (result < 0)
+                {
+                    throw new Exception("Negative numbers are not allowed: " + result);
+                }
+                return result;
+            }
+            else
+            {
+                throw new Exception("Invalid input: " + number);
+            }
         }
 }
